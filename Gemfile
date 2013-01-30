@@ -17,7 +17,6 @@ gem 'devise'
 gem 'transitions', '0.0.9', :require => ["transitions", "active_record/transitions"]
 gem 'i18n-js'
 gem 'configuration'
-gem 'capistrano'
 
 gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 # (using standard csv lib if ruby version is 1.9)
@@ -36,4 +35,6 @@ group :development, :test do
   gem 'capybara'
   # gem 'capybara-webkit'
   gem 'database_cleaner'
+  gem 'capistrano'
+  gem 'capistrano_colors'
 end

@@ -6,6 +6,10 @@ Fulcrum::Application.initialize!
 
 Fulcrum::Application.configure do
   ActionMailer::Base.delivery_method = :smtp
+  ActionMailer::Base.raise_delivery_errors = true
+  ActionMailer::Base.perform_deliveries = true
+  ActionMailer::Base.default_charset = 'utf-8'
+  ActionMailer::Base.default_url_options = { :host => FULCRUM_MAILER_HOST }
   
   ActionMailer::Base.smtp_settings = {
     :address   => FULCRUM_SMTP_SERVER,
@@ -16,6 +20,4 @@ Fulcrum::Application.configure do
     :port => FULCRUM_MAILER_PORT, 
     :authentication => FULCRUM_MAILER_AUTHENTICATION_METHOD
   }
-
-  ActionMailer::Base.default_url_options = { :host => FULCRUM_MAILER_HOST }
 end
