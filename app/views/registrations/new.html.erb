@@ -19,6 +19,11 @@
     <%= f.label :email %>
     <div class="field"><%= f.email_field :email %></div>
   </div>
+  
+  <div class="field-wrapper">
+    <%= f.label :admin %>
+    <div class="field"><%= f.check_box :admin %></div>
+  </div>
 
   <div class="actions"><%= f.submit t('sign up') %></div>
 <% end %>

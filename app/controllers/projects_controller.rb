@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  before_filter :check_is_user_admin, :only => [:new, :create, :edit, :update, :destroy]
 
   # GET /projects
   # GET /projects.xml

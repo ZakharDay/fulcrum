@@ -17,12 +17,15 @@ gem 'devise'
 gem 'transitions', '0.0.9', :require => ["transitions", "active_record/transitions"]
 gem 'i18n-js'
 gem 'configuration'
+gem 'capistrano'
 
 gem 'fastercsv', '1.5.3', :platforms => :ruby_18
 # (using standard csv lib if ruby version is 1.9)
 
 group :production do
   gem 'pg'
+  gem 'execjs'
+  gem 'therubyracer'
 end
 
 group :development, :test do
@@ -31,6 +34,6 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'jasmine', '1.1.0'
   gem 'capybara'
-  gem 'capybara-webkit'
+  # gem 'capybara-webkit'
   gem 'database_cleaner'
 end

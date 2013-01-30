@@ -18,6 +18,12 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def check_is_user_admin
+    unless current_user.try(:admin?)
+      render_404 and return
+    end
+  end
+
   private 
 
   def set_locale

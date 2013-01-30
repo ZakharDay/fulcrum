@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
   # Setup accessible (or protected) attributes for your model
   attr_accessible :email, :password, :password_confirmation, :remember_me,
                   :name, :initials, :email_delivery, :email_acceptance, 
-                  :email_rejection, :locale
+                  :email_rejection, :locale, :admin
 
   # Flag used to identify if the user was found or created from find_or_create
   attr_accessor :was_created
