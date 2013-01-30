@@ -1,5 +1,5 @@
 load 'deploy'
-load 'deploy/assets'
+# load 'deploy/assets'
 load 'config/deploy'
 
 namespace :deploy do
