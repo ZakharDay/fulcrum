@@ -172,7 +172,8 @@ Fulcrum.StoryView = Fulcrum.FormView.extend({
   },
 
   startEdit: function(e) {
-    if((!$(e.target).is('.estimate')) && (!this.model.get('editing'))) {
+    //TODO Looks weird
+    if((!this.model.get('editing')) && (!$(e.target).is('input'))) {
       this.model.set({editing: true, editingDescription: false});
     }
   },
@@ -263,6 +264,7 @@ Fulcrum.StoryView = Fulcrum.FormView.extend({
       this.$el.append(
         this.makeFormControl(function(div) {
           $(div).append(this.textField("title", {
+            'class' : 'title',
             'placeholder': I18n.t('story title')
           }));
         })
@@ -489,7 +491,7 @@ Fulcrum.StoryView = Fulcrum.FormView.extend({
 
   setFocus: function() {
     if (this.model.get('editing') === true ) {
-      this.$('input').first().focus();
+      this.$('input.title').first().focus();
     }
   },
 
