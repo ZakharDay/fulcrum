@@ -35,6 +35,6 @@ group :development, :test do
   gem 'capybara'
   # gem 'capybara-webkit'
   gem 'database_cleaner'
-  gem 'capistrano'
+  gem 'capistrano', '~> 2.15.5'
   gem 'capistrano_colors'
 end
